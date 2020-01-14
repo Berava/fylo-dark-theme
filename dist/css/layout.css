@@ -1,0 +1,63 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-ul {
+  display: flex;
+}
+
+.row {
+  display: flex;
+}
+
+.info {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.info-text {
+  flex: 1;
+  width: 400px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial .user {
+  display: flex;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-control input {
+  flex: 1;
+}
+
+footer .flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: auto;
+  flex: 1;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

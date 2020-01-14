@@ -1,4 +1,4 @@
-/* mobile first */
+/* desktop first */
 :root {
   /* Primary Colors */
   --clr-primary-intro-email-bg: hsl(217, 28%, 15%);
@@ -16,11 +16,234 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
 }
 
 body {
+  background-color: var(--clr-primary-main-bg);
+  color: var(--clr-neutral-white);
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
+}
+
+header {
+  background-color: var(--clr-primary-intro-email-bg);
+  background-image: url('../img/bg-curvy-desktop.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding-bottom: 80px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 20px;
+  width: 1200px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Nav styling */
+nav {
+  padding: 15px;
+}
+
+.nav-ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-ul li a {
+  color: var(--clr-neutral-white);
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* Hero Styling */
+.hero {
+  margin: 20px auto;
+  max-width: 100%;
+  text-align: center;
+  width: 600px;
+}
+
+.btn {
+  background-image: linear-gradient(
+    to right,
+    var(--clr-accent-cyan),
+    var(--clr-accent-blue)
+  );
+  border: 0;
+  border-radius: 50px;
+  color: var(--clr-neutral-white);
+  padding: 16px 60px;
+}
+
+/* Features Style */
+.row {
+  flex-wrap: wrap;
+}
+.feature {
+  margin: 40px auto;
+  text-align: center;
+  width: 400px;
+}
+
+/* Info style */
+
+.info .productive-img {
+  margin-right: 50px;
+  width: 400px;
+}
+
+.cyan-link {
+  border-bottom: 1px solid var(--clr-accent-cyan);
+  color: var(--clr-accent-cyan);
+  padding: 5px;
+  text-decoration: none;
+}
+
+.cyan-link img {
+  width: 14px;
+}
+
+/* testimonials */
+
+.testimonials {
+  margin: 40px auto;
+}
+.testimonial {
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  background-color: var(--clr-primary-testimonials-bg);
+  margin: 10px;
+  padding: 20px;
+}
+
+.testimonial .user {
+  margin-top: 20px;
+}
+
+.testimonial .user img {
+  border-radius: 50%;
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.testimonial .user h5 {
+  margin: 0;
+}
+
+.testimonial .user h6 {
+  opacity: 0.7;
+  margin: 5px 0;
+}
+
+/* Form styling */
+form {
+  background-color: var(--clr-primary-main-bg);
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto -100px;
+  max-width: 100%;
+  padding: 40px;
+  position: relative;
+  text-align: center;
+  width: 800px;
+  z-index: 1;
+}
+
+form h1 {
+  margin: 0 auto;
+}
+
+form p {
+  margin: 30px 0;
+}
+
+.form-control input {
+  border: 0;
+  border-radius: 50px;
+  color: var(--clr-neutral-white);
+  margin: 20px 20px 20px 0;
+  padding: 16px 60px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--clr-primary-footer-bg);
+  padding: 150px 0 30px;
+}
+
+footer .flex {
+  margin-bottom: 15px;
+}
+
+.footer-section {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.footer-section p {
+  margin: 0 0 0 10px;
+}
+
+.footer-section ul a {
+  color: var(--clr-neutral-white);
+  display: inline-block;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.footer-section .social-icons a {
+  border: 2px solid var(--clr-neutral-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .btn {
+    width: 100%;
+  }
+  .logo {
+    width: 80px;
+  }
+
+  .nav-ul li a {
+    padding: 10px;
+  }
+
+  header {
+    background-image: url('../img/bg-curvy-mobile.svg');
+    padding-bottom: 0;
+  }
+
+  .info .productive-img {
+    margin: 0 auto;
+  }
+
+  .form-control input {
+    margin: 20px 0;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
 }

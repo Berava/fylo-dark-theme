@@ -1,7 +1,9 @@
 :root {
   --base-size: 14px;
   --type-scale: 1.2;
-  --h4: calc(var(--base-size) * var(--type-scale));
+  --h6: calc(var(--base-size) * var(--type-scale));
+  --h5: calc(var(--h6) * var(--type-scale));
+  --h4: calc(var(--h5) * var(--type-scale));
   --h3: calc(var(--h4) * var(--type-scale));
   --h2: calc(var(--h3) * var(--type-scale));
   --h1: calc(var(--h2) * var(--type-scale));
@@ -15,12 +17,16 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6,
+.nav-ul li a {
   font-family: 'Raleway', sans-serif;
 }
 
 h1 {
   font-size: var(--h1);
+  line-height: 1.5;
 }
 
 h2 {
@@ -35,10 +41,33 @@ h4 {
   font-size: var(--h4);
 }
 
+h5 {
+  font-size: var(--h5);
+}
+
+h6 {
+  font-size: var(--h6);
+}
+
 .small-text {
   font-size: var(--small-text);
 }
 
 p {
   font-size: var(--base-size);
+  line-height: 1.5;
+}
+
+.btn {
+  font-size: 16px;
+}
+
+.testimonial .user h6 {
+  font-weight: normal;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --type-scale: 1.125;
+  }
 }
